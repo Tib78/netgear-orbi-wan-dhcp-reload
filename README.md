@@ -17,7 +17,9 @@ Il fonctionne sous Linux/Mac OS et doit être lancer via un cron ou un démon la
 Si vous souhaitez automatiser le lancement du script, vous pouvez ajouter celui-ci dans crontab :
 
 - `crontab -e`
-- Ajoutez la ligne suivante pour un lancement tous les jours à 3h00 : `0 3 * * * /path/to/reloadWanDHCP_generic.sh`
+- Ajoutez la ligne suivante pour un lancement tous les jours à 3h00 : 
+
+  `0 3 * * * /path/to/reloadWanDHCP_generic.sh`
 
 Pour les utilisateurs MacOS vous pouvez utiliser launchd qui est l'utilitaire officiel :
 
