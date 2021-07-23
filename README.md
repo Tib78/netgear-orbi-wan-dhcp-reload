@@ -17,19 +17,19 @@ Il fonctionne sous Linux/Mac OS et doit être lancer via un cron ou un démon la
 Si vous souhaitez automatiser le lancement du script, vous pouvez ajouter celui-ci dans crontab :
 
 - `crontab -e`
-- Ajoutez la ligne suivante pour un lancement tous les jours à 3h00 : `0 3 * * * /path/to/reloadWanDHCP.sh`
+- Ajoutez la ligne suivante pour un lancement tous les jours à 3h00 : `0 3 * * * /path/to/reloadWanDHCP_generic.sh`
 
 Pour les utilisateurs MacOS vous pouvez utiliser launchd qui est l'utilitaire officiel :
 
 - Ajoutez le fichier plist fourni dans le répertoire suivant : `/Library/LaunchDaemons/`
 - Editez le fichier pour mettre à jour le chemin du script.
 - Chargez le démon avec la commande suivante :
+
  `sudo launchctl load -w /Library/LaunchDaemons/com.startup.dhcp.plist`
  
 Pour vérifier que le script fonctionne bien il suffit de se rendre dans l'onglet Avancé -> Afficher les statistiques puis vérifier le temps de disponibilité, il doit remonter au dernier lancement du script.
 
 A noter : 
 
-Ce script a été testé avec succès avec le routeur Orbi RBR850 en mode routeur (firmware V3.2.18.1_1.4.14) avec la connexion WAN en mode DHCP Orange et un module TP-LINK MC220L.
-
-Il est utile de préciser que ce problème concerne uniquement les personnes qui souhaitent bypasser leur livebox avec un Orbi, si vous mettez votre Orbi derrière une Livebox en mode AP, vous n'aurez pas ce problème.
+- Ce script a été testé avec succès avec le routeur Orbi RBR850 en mode routeur (firmware V3.2.18.1_1.4.14) avec la connexion WAN en mode DHCP Orange et un module TP-LINK MC220L.
+- Il est utile de préciser que ce problème concerne uniquement les personnes qui souhaitent bypasser leur livebox avec un Orbi, si vous mettez votre Orbi derrière une Livebox en mode AP, vous n'aurez pas ce problème.
