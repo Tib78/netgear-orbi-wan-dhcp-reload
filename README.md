@@ -1,4 +1,4 @@
-# netgear-wan-dhcp-reload
+# netgear-orbi-wan-dhcp-reload
 
 Ce script permet de corriger le problème de perte de connexion présent sur les routeurs Orbi en mode routeur et connectés sans livebox (via un module SFP ou ONT) avec le paramètre "DHCP Orange".
 
